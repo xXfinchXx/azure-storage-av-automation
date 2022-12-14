@@ -3,7 +3,7 @@
 
 Antivirus Automation for Azure Storage is an ARM template that sets resources in your environment in order to protect an Azure blob container from malware by scanning every blob that’s uploaded. The project consists of a function triggered when files are uploaded to or updated in a Blob storage container, and a Windows VM that utilizes  Microsoft Defender Antivirus.
 
-<img src="https://raw.githubusercontent.com/Azure/azure-storage-av-automation/main/AvAutoSystem.png"/>
+<img src="https://raw.githubusercontent.com/xXfinchXx/azure-storage-av-automation/main/AvAutoSystem.png"/>
 
 For each blob uploaded to the protected container, the function will send the blob to the VM for scanning and change the blob location according to the scan results:
 * If the blob is clean, it’s moved to the clean-files container
@@ -42,7 +42,7 @@ Instead, follow the “Existing Vnet variation” section below which will help 
 
 ## Deployment steps:
 1. Use this link to deploy the ARM template  
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-storage-av-automation%2Fmain%2FARM_template%2FAntivirusAutomationForStorageTemplate.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FxXfinchXx%2Fazure-storage-av-automation%2Fmain%2FARM_template%2FAntivirusAutomationForStorageTemplate.json" target="_blank">
     <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
 
@@ -162,7 +162,7 @@ This part is for users that want to modify the code and make some changes.
 ### Deployment Steps
 1. Use the following command to clone the repo
     ```
-    git clone https://github.com/Azure/azure-storage-av-automation.git
+    git clone https://github.com/xXfinchXx/azure-storage-av-automation.git
     ```
 2. Modify the project
 3. Open Storage AV Automation/Scripts/BuildAndDeploy.ps1 and enter the necessary parameters
