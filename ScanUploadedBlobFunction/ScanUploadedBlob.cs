@@ -9,7 +9,7 @@ namespace ScanUploadedBlobFunction
     {
         
         [FunctionName("ScanUploadedBlob")]
-        public static void Run([BlobTrigger("%targetContainerName%/{name}", Connection = "windefenderstorage")] Stream myBlob, string name, ILogger log)
+        public static void Run([BlobTrigger("{name}", Connection = "windefenderstorage")] Stream myBlob, string name, ILogger log)
         {
             log.LogInformation($"C# Blob trigger ScanUploadedBlob function Processed blob Name:{name} Size: {myBlob.Length} Bytes");
             
